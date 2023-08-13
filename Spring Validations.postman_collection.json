@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "81241c45-8cd3-4b06-9f61-b5a967ec6345",
+		"name": "Spring Validations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28840259"
+	},
+	"item": [
+		{
+			"name": "check-validation-success",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Minato\",\r\n    \"email\": \"namikazee.minato\",\r\n    \"description\": \"Yellow Flash of the leaf\",\r\n    \"bio\": \"I am the fourth Hokage\",\r\n    \"age\": 20,\r\n    \"score\": 98,\r\n    \"price\": 12.25,\r\n    \"budget\": 850.75,\r\n    \"amount\": 111.22,\r\n    \"ssn\": \"123-45-6789\",\r\n    \"emailAddress\": \"namikazee.minato@qwerty.cpm\",\r\n    \"eventDate\": \"2024-10-10\",\r\n    \"birthDate\": \"1995-01-01\",\r\n    \"agreedToTerms\": true,\r\n    \"isDeleted\": false,\r\n    \"websiteUrl\": \"https://www.google.com\",\r\n    \"rating\": 4,\r\n    \"tags\": [\"tag1\",\"tag2\",\"tag3\"],\r\n    \"priorities\": [\"p1\",\"p2\"],\r\n    \"itemQuantity\": 6,\r\n    \"address\": {\r\n        \"street\": \"qwerty\",\r\n        \"city\": \"vegas\",\r\n        \"zipcode\": \"918273\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/check-validation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"check-validation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check-validation-errors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \" \",\r\n    \"description\": \" \",\r\n    \"bio\": \"I am Hokage\",\r\n    \"age\": 10,\r\n    \"score\": 69,\r\n    \"price\": 12,\r\n    \"budget\": 850,\r\n    \"amount\": 11.22,\r\n    \"ssn\": \"1234-5-678\",\r\n    \"emailAddress\": \"namikazee.minato.qwerty.cpm\",\r\n    \"eventDate\": \"1995-01-01\",\r\n    \"birthDate\": \"2023-10-10\",\r\n    \"agreedToTerms\": false,\r\n    \"isDeleted\": true,\r\n    \"websiteUrl\": \"google.com\",\r\n    \"rating\": 1,\r\n    \"tags\": [\"tag1\"],\r\n    \"priorities\": [\"p1\"],\r\n    \"itemQuantity\": 2,\r\n    \"address\": {\r\n        \"street\": \"qwerty\",\r\n        \"city\": \"vegas\",\r\n        \"zipcode\": \"918273123\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/check-validation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"check-validation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
