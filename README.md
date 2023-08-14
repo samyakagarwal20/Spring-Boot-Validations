@@ -1,7 +1,7 @@
 # Spring-Boot-Validations
 It is a sample spring boot application to demonstrate the different types of validations provided by Spring Validation module
 
-### Prequisites for running the application:
+### Prerequisites for running the application:
 
 ---
 Please make sure to have an active instance of MySQL DB running on your system before starting the application.
@@ -30,4 +30,43 @@ In this method, we have explicitly defined a datasource and a corresponding Jdbc
 
 The configuration are done within the file **JDBCConfig.java**
 
+---
 
+## Spring Validation
+
+Spring Validation is a feature provided by the Spring Framework to facilitate the validation of objects and data in a consistent and customizable manner. It helps ensure that the data submitted to your application is accurate, complete, and meets certain criteria before it is processed further. This is particularly useful for web applications, where user input needs to be validated before it is stored in a database or used in any business logic.
+
+The following are the different validations that we can use:
+
+* ```@NotNull``` - Ensures a field is not null.
+* ```@NotEmpty``` - Ensures a field is not null and not empty.
+* ```@NotBlank``` - Ensures a string field is not null, not empty, and not just whitespace.
+* ```@Size``` - Validates the size of a field (e.g., string length, collection size).
+* ```@Min``` - Validates that a numeric field is greater than or equal to a specified minimum value.
+* ```@Max``` - Validates that a numeric field is less than or equal to a specified maximum value.
+* ```@DecimalMin``` - Validates that a numeric field is greater than or equal to a specified minimum decimal value.
+* ```@DecimalMax``` - Validates that a numeric field is less than or equal to a specified maximum decimal value.
+* ```@Digits``` - Validates that a numeric field has a specified number of integer and fraction digits.
+* ```@Pattern``` - Validates that a field matches a regular expression pattern.
+* ``@Email`` - Validates that a string is a valid email address.
+* ```@Future``` - Validates that a date or time is in the future.
+* ```@Past``` - Validates that a date or time is in the past.
+* ```@AssertTrue``` - Validates that a boolean field is true.
+* ```@AssertFalse``` - Validates that a boolean field is false.
+* ```@Valid``` - Cascades validation to associated objects (used with nested objects or collections).
+* ```@NotNull(groups = {Group1.class})``` - Conditional validation based on validation groups.
+* ```@Size.List``` - Combines multiple @Size annotations for composite validation.
+* ```@Validated``` - Specifies validation group(s) at the class level.
+* ```@CreditCardNumber``` - Validates that a string is a valid credit card number.
+* ```@URL``` - Validates that a string is a valid URL.
+* ```@Range``` - Validates that a numeric field is within a specified range (inclusive).
+* ```@Positive``` - Validates that a numeric field is positive (greater than 0).
+* ```@PositiveOrZero``` - Validates that a numeric field is positive or zero.
+* ```@Negative``` - Validates that a numeric field is negative (less than 0).
+* ```@NegativeOrZero``` - Validates that a numeric field is negative or zero.
+* ```@FutureOrPresent``` - Validates that a date or time is in the future or the present.
+* ```@PastOrPresent``` - Validates that a date or time is in the past or the present.
+
+```
+NOTE: The usage of most of these validations are already demonstrated in this application
+```
